@@ -3,3 +3,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from groq import Groq
 import os
 import json
+
+# Load API key from environment variable
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except:
+    pass  # dotenv is optional
