@@ -86,10 +86,10 @@ Rules:
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
     
-    @app.get("/")
-    async def root():
-        """Health check endpoint"""
-        return {"message": "LLM API is running", "status": "healthy"}
+@app.get("/")
+async def root():
+    """Health check endpoint"""
+    return {"message": "LLM API is running", "status": "healthy"}
 
 if __name__ == "__main__":
     import uvicorn
