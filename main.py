@@ -10,3 +10,6 @@ try:
     load_dotenv()
 except:
     pass  # dotenv is optional
+
+# Initialize FastAPI app
+app = FastAPI(title="Destigree API")
