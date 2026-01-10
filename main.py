@@ -67,4 +67,13 @@ Rules:
 - Top 5 universities that offer those majors
 - Return ONLY valid JSON
 """
-
+            # Call Groq API
+        response = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",  # Fast and free model
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant that responds with valid JSON."},
+                {"role": "user", "content": message}
+            ],
+            response_format={"type": "json_object"},  # Force JSON response
+            temperature=0.7
+        )
