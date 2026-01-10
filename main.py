@@ -40,10 +40,10 @@ async def generate_response(request: dict):
     try:
         # Example major list to show the AI
         major_example = {
-            "major": "Computer Engineering",
+            "degree": "Computer Engineering",
             "reason": "If you are fascinated by how computers and electronics work, enjoy coding, building gadgets, and solving tech challenges, you might be motivated to study computer engineering to create and improve technology.",
             "requirements": "ENG4U/EAE4U\nMHF4U\nMCV4U\nSPH4U\nSCH4U",
-            "top universities": "University of Toronto\nUniversity of British Columbia\nUniversity of Waterloo\nMcGill University\nUniversité de Montréal",
+            "universities": "University of Toronto\nUniversity of British Columbia\nUniversity of Waterloo\nMcGill University\nUniversité de Montréal",
             "careers": "Software Developer\nHardware Engineer\nCloud Engineer\nData Scientist\nCybersecurity Analyst",
             "salary": "$91,000 - $120,000"
         }   
@@ -93,4 +93,4 @@ async def root():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=4200)
