@@ -22,3 +22,10 @@ app.add_middleware(
     allow_methods=["*"],  # Allow all methods (GET, POST, etc.)
     allow_headers=["*"],  # Allow all headers
 )
+
+#Initialize GROQ client
+api_key=os.getenv("GROQ_API_KEY")
+if not api_key:
+    print("Warning: GROQ API KEY not found in the environment variables!")
+client = Groq(api_key=api_key)
+
