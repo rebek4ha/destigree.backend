@@ -77,3 +77,9 @@ Rules:
             response_format={"type": "json_object"},  # Force JSON response
             temperature=0.7
         )
+                # Get the AI's response and parse it
+        ai_response = response.choices[0].message.content
+        result = json.loads(ai_response)
+        
+        # Return the different uni major recommendations
+        return result
