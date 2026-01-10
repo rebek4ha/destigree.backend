@@ -54,7 +54,7 @@ User wants: {user_prompt}
 
 Respond with exactly 6 university major recommendations in this JSON format:
 {{
-    "majors": [
+    "degrees": [
         {json.dumps(major_example, indent=8)},
         ... (6 majors total)
     ]
