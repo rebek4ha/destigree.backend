@@ -17,7 +17,7 @@ app = FastAPI(title="Destigree API")
 # Configure CORS to allow Angular frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://localhost:4200"],  # Allow all origins
+    allow_origins=["http://localhost:4200"],  # Allow all origins
     allow_credentials=True,
     allow_methods=["POST", "GET"],  # Allow all methods (GET, POST, etc.)
     allow_headers=["Content-Type"],  # Allow all headers
@@ -93,4 +93,4 @@ async def root():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=4200)
+    uvicorn.run(app, host="0.0.0.0", port=8000)
