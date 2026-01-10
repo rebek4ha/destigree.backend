@@ -46,7 +46,7 @@ async def generate_response(request: dict):
             "top universities": "University of Toronto\nUniversity of British Columbia\nUniversity of Waterloo\nMcGill University\nUniversité de Montréal"
             "careers": "Software Developer\nHardware Engineer\nCloud Engineer\nData Scientist\nCybersecurity Analyst",
             "salary": "$91,000 - $120,000"
-        }
+        }   
         #Create the message to send to the API
         message = f"""You are a university major expert.
 
@@ -83,3 +83,5 @@ Rules:
         
         # Return the different uni major recommendations
         return result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
