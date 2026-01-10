@@ -36,4 +36,35 @@ async def generate_response(request: dict):
     
     if not user_prompt:
         raise HTTPException(status_code=400, detail="Please provide a 'prompt' in your request")
+    
+    try:
+        # Example major list to show the AI
+        major_example = {
+            "major": "Computer Engineering",
+            "reason": "If you are fascinated by how computers and electronics work, enjoy coding, building gadgets, and solving tech challenges, you might be motivated to study computer engineering to create and improve technology.",
+            "requirements": "ENG4U/EAE4U\nMHF4U\nMCV4U\nSPH4U\nSCH4U",
+            "top universities": "University of Toronto\nUniversity of British Columbia\nUniversity of Waterloo\nMcGill University\nUniversité de Montréal"
+            "careers": "Software Developer\nHardware Engineer\nCloud Engineer\nData Scientist\nCybersecurity Analyst",
+            "salary": "$91,000 - $120,000"
+        }
+        #Create the message to send to the API
+        message = f"""You are a university major expert.
+
+User wants: {user_prompt}
+
+Respond with exactly 6 university major recommendations in this JSON format:
+{{
+    "majors": [
+        {json.dumps(major_example, indent=8)},
+        ... (6 majors total)
+    ]
+}}
+
+Rules:
+- Exactly 6 university majors
+- Accurate majors, reasons, and requirements
+- Brief descriptions (1-2 sentences)
+- Top 5 universities that offer those majors
+- Return ONLY valid JSON
+"""
 
