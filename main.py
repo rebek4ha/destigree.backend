@@ -29,3 +29,11 @@ if not api_key:
     print("Warning: GROQ API KEY not found in the environment variables!")
 client = Groq(api_key=api_key)
 
+@app.post("/api/generate")
+async def generate_response(request: dict):
+    # Get the user's prompt
+    user_prompt = request.get("prompt", "")
+    
+    if not user_prompt:
+        raise HTTPException(status_code=400, detail="Please provide a 'prompt' in your request")
+
