@@ -61,7 +61,7 @@ Respond with exactly 9 university major recommendations in this JSON format:
 }}
 
 Rules:
-- Exactly 6 university majors
+- Exactly 9 university majors
 - Accurate majors, reasons, and requirements
 - Brief descriptions (1-2 sentences)
 - Top 5 universities that offer those majors
