@@ -17,10 +17,10 @@ app = FastAPI(title="Destigree API")
 # Configure CORS to allow Angular frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow all origins
+    allow_origins=["https://localhost:4200"],  # Allow all origins
     allow_credentials=True,
-    allow_methods=["*"],  # Allow all methods (GET, POST, etc.)
-    allow_headers=["*"],  # Allow all headers
+    allow_methods=["POST", "GET"],  # Allow all methods (GET, POST, etc.)
+    allow_headers=["Content-Type"],  # Allow all headers
 )
 
 #Initialize GROQ client
