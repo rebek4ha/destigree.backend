@@ -40,11 +40,11 @@ async def generate_response(request: dict):
     try:
         # Example major list to show the AI
         major_example = {
-            "degree": "Computer Engineering",
+            "degree": "Bachelor of Computer Engineering",
             "reason": "If you are fascinated by how computers and electronics work, enjoy coding, building gadgets, and solving tech challenges, you might be motivated to study computer engineering to create and improve technology.",
-            "requirements": "ENG4U/EAE4U\nMHF4U\nMCV4U\nSPH4U\nSCH4U",
-            "universities": "University of Toronto\nUniversity of British Columbia\nUniversity of Waterloo\nMcGill University\nUniversité de Montréal",
-            "careers": "Software Developer\nHardware Engineer\nCloud Engineer\nData Scientist\nCybersecurity Analyst",
+            "requirements": "ENG4U/EAE4U, MHF4U, MCV4U, SPH4U & SCH4U",
+            "universities": "University of Toronto, University of British Columbia, University of Waterloo, McGill University & Université de Montréal",
+            "careers": "Software Developer, Hardware Engineer, Cloud Engineer, Data Scientist & Cybersecurity Analyst",
             "salary": "$91,000 - $120,000"
         }   
         #Create the message to send to the API
