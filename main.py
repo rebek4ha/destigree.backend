@@ -65,8 +65,8 @@ Rules:
 - Exactly 9 university majors
 - Accurate degrees, reasons, and requirements
 - Brief descriptions (1-2 sentences)
-- Top 3 universities that offer those majors based on the location that the user gives
-- If location is not put in the prompt, say the location as Canada automatically 
+- Top 3 universities that offer those degrees based on the location that the user gives
+- If the user does not specify location, give the top 3 universities around the world for that specific degree
 - Return ONLY valid JSON
 """
             # Call Groq API
