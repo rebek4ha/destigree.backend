@@ -41,6 +41,7 @@ async def generate_response(request: dict):
         # Example major list to show the AI
         major_example = {
             "degree": "Bachelor of Computer Engineering",
+            "location": "Canada",
             "reason": "If you are fascinated by how computers and electronics work, enjoy coding, building gadgets, and solving tech challenges, you might be motivated to study computer engineering to create and improve technology.",
             "requirements": "ENG4U/EAE4U, MHF4U, MCV4U, SPH4U & SCH4U",
             "universities": "University of Toronto, University of British Columbia & University of Waterloo",
@@ -64,7 +65,8 @@ Rules:
 - Exactly 9 university majors
 - Accurate degrees, reasons, and requirements
 - Brief descriptions (1-2 sentences)
-- Top 3 universities that offer those majors based on the location that the user gives. If they don't give a location give universities in Canada automatically.
+- Top 3 universities that offer those majors based on the location that the user gives
+- If location is not put in the prompt, say the location as Canada automatically 
 - Return ONLY valid JSON
 """
             # Call Groq API
