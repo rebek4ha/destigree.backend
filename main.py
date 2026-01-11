@@ -43,7 +43,7 @@ async def generate_response(request: dict):
             "degree": "Bachelor of Computer Engineering",
             "reason": "If you are fascinated by how computers and electronics work, enjoy coding, building gadgets, and solving tech challenges, you might be motivated to study computer engineering to create and improve technology.",
             "requirements": "ENG4U/EAE4U, MHF4U, MCV4U, SPH4U & SCH4U",
-            "universities": "University of Toronto, University of British Columbia, University of Waterloo, McGill University & Université de Montréal",
+            "universities": "University of Toronto, University of British Columbia & University of Waterloo",
             "careers": "Software Developer, Hardware Engineer, Cloud Engineer, Data Scientist & Cybersecurity Analyst",
             "salary": "$91,000 - $120,000"
         }   
@@ -64,7 +64,7 @@ Rules:
 - Exactly 9 university majors
 - Accurate degrees, reasons, and requirements
 - Brief descriptions (1-2 sentences)
-- Top 5 universities that offer those majors
+- Top 3 universities that offer those majors based on the location that the user gives. If they don't give a location give universities in Canada automatically.
 - Return ONLY valid JSON
 """
             # Call Groq API
