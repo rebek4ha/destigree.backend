@@ -43,7 +43,9 @@ async def generate_response(request: dict):
             "degree": "Bachelor of Computer Engineering",
             "reason": "If you are fascinated by how computers and electronics work, enjoy coding, building gadgets, and solving tech challenges, you might be motivated to study computer engineering to create and improve technology.",
             "requirements": "ENG4U/EAE4U, MHF4U, MCV4U, SPH4U & SCH4U",
-            "universities": "University of Toronto, University of British Columbia & University of Waterloo",
+            "university1": "University of Toronto",
+            "university2":" University of British Columbia",
+            "university3":"University of Waterloo",
             "careers": "Software Developer, Hardware Engineer, Cloud Engineer, Data Scientist & Cybersecurity Analyst",
             "salary": "$91,000 - $120,000"
         }   
@@ -52,19 +54,21 @@ async def generate_response(request: dict):
 
 User wants: {user_prompt}
 
-Respond with exactly 9 university major recommendations in this JSON format:
+Respond with exactly 8 university major recommendations tailored to the user's prompt in this JSON format:
 {{
     "degrees": [
         {json.dumps(major_example, indent=8)},
-        ... (9 majors total)
+        ... (8 majors total)
     ]
 }}
 
 Rules:
-- Exactly 9 university majors
+- Exactly 8 university majors
 - Accurate degrees, reasons, and requirements
 - Brief descriptions (1-2 sentences)
-- Top 3 universities that offer those degrees based on the location that the user gives
+- university1 is the top 1 university that offer those degrees according to what location the user inputs
+- university2 is the top 2 university that offer those degrees according to what location the user inputs
+- university3 is the top 3 university that offer those degrees according to what location the user inputs
 - If the user does not specify location, give the top 3 universities around the world for that specific degree
 - Return ONLY valid JSON
 """
