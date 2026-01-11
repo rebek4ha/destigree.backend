@@ -41,7 +41,6 @@ async def generate_response(request: dict):
         # Example major list to show the AI
         major_example = {
             "degree": "Bachelor of Computer Engineering",
-            "location": "Canada",
             "reason": "If you are fascinated by how computers and electronics work, enjoy coding, building gadgets, and solving tech challenges, you might be motivated to study computer engineering to create and improve technology.",
             "requirements": "ENG4U/EAE4U, MHF4U, MCV4U, SPH4U & SCH4U",
             "universities": "University of Toronto, University of British Columbia & University of Waterloo",
